@@ -18,13 +18,13 @@
 - has_many :rooms, through: room_users
 - has_many :room_users
 
-## plans テーブル
+## events テーブル
 
 | Column     | Type       | Options              |
 | ---------- | ---------- | -------------------- |
-| plan       | string     | null: false          |
-| time       | time       | null: false          |
-| suppl      | string     | null: false          |
+| title      | string     | null: false          |
+| content    | text       | null: false          |
+| start_time | datetime   |                      |
 | user_id    | references | null: false, foreign_key: true |
 
 ### Association
