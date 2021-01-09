@@ -1,0 +1,8 @@
+<h1>Events#index</h1>
+<p>Find me in app/views/events/index.html.erb</p>
+
+<hr style="border:0;border-top:1px solid red;">
+
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+<% end %>
