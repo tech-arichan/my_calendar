@@ -1,0 +1,2 @@
+class OverallSchedule < ApplicationRecord
+end
