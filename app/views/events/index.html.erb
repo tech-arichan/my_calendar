@@ -1,16 +1,8 @@
-
-<%= link_to 'イベント追加', new_event_path %>
-
-<hr style="border:0;border-top:1px solid red;">
-
-
-<%= month_calendar events: @events do |date, events| %>
-  <%= date.day %>
-
-  <% events.each do |event| %>
-    <div>
-      <%= event.title %>
-    </div>
-  <% end %>
-
-<% end %>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "side_bar" %>
+  </div>
+  <div class="chat">
+    <%= render "main_chat" %>
+  </div>
+</div>
