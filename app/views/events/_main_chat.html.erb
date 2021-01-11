@@ -6,7 +6,7 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-      <%= link_to 'User name', "/" %>  
+    <%= link_to current_user.name, edit_user_path(current_user) %>
     </div>
   </div>
 </div>
