@@ -1,16 +1,14 @@
-<div class="memos">
-  <div id='messages'>
-    <% @memos.reverse_each do |memo| %>
-      <div class="upper-memo">
-        <p class="memo-user">user name</p>
-        <p class="memo-date"><%= l memo.created_at %></p>
-      </div>
-      <div class="upper-memo">
-        <p class="memo-content"><%= memo.memo %></p>
-        <p class="memo-delete"><%= link_to 'メモ削除', memo_path(memo.id), method: :delete %></p>
-      </div>
-    <% end %>
-</div>
+<div id='memos' class="memos">
+  <% @memos.reverse_each do |memo| %>
+    <div class="upper-memo">
+      <p class="memo-user">user name</p>
+      <p class="memo-date"><%= l memo.created_at %></p>
+    </div>
+    <div class="upper-memo">
+      <p class="memo-content"><%= memo.memo %></p>
+      <p class="memo-delete"><%= link_to 'メモ削除', memo_path(memo.id), method: :delete %></p>
+    </div>
+  <% end %>
 </div>
 
 ------------
