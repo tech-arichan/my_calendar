@@ -10,7 +10,7 @@
 
 ### Association
 
-- has_many :plans
+- has_many :events
 - has_many :memos
 -----------------------------
 <!-- とりあえずここまで -->
