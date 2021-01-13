@@ -3,12 +3,9 @@ class MemosController < ApplicationController
     @memos = Memo.all
   end
 
-  def new
-    @memo = Memo.new
-  end
-
   def create
-    @memo = Memo.new(text: params[:message][:text])
+    memo = Memo.create(memo: params[:memo])
+    render json:{ memo: memo }
     # if @memo.save
     #   redirect_to memos_path
     # else
@@ -26,6 +23,6 @@ end
   # private
 
   # def memo_params
-  #   params.permit(:memo)
+  #   params.require(:memo).permit(:memo)
   # end
 end
